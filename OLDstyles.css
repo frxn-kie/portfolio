@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#title1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#title1::before {
+  content: 'is awesome';
+  position: absolute;
+  bottom: -70px;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+body {
+background-color: #FFF;
+}
+
+.hero-title {
+    color: #042733!important;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
+}
+
+.hero-subtitle {
+    color: #042733!important;
+}
+
+.about-me, .contact-me {
+    background-color: #89B9C9!important;
+}
+
+a, a:link,
+a:visited {
+    outline-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .link-text:hover {
+    color: #35FCF9;
+  }
+
+  .my-button {
+    background: #35FCF9;
+    color:black;
+    border-color:#35FCF9;
+    border-radius: 8px;
+  }
