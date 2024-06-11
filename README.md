@@ -33,7 +33,7 @@ I welcome contributions to improve my portfolio. If you have any suggestions or 
 Feel free to reach out to me via:
 
 - Email: [francescabartlett00@gmail.com](mailto:francescabartlett00@gmail.com)
-- LinkedIn: [your LinkedIn profile](https://www.linkedin.com/in/francesca-bartlett)
+- LinkedIn: [Francesca Bartlett](https://www.linkedin.com/in/francesca-bartlett)
 
 ## License
 
