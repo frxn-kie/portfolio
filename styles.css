@@ -118,15 +118,26 @@ font-size: 20px;
 
 @media only screen and (min-width: 600px) {
   body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
     flex-direction: row;
   }
 
-  .left-hand, .right-hand {
-    width: 50%;
-    height: 100%;
+.right-hand {
+    position: relative;
+    order: 2;
+    grid-row: span 2;
+  }
+
+  .left-hand {
+    position: relative;
+    order: 3;
   }
   .projects {
     padding-right: 5vw;
     font-size: 18vw;
+    position: relative;
+    order: 1;
   }
 }
