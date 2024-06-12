@@ -144,11 +144,12 @@ font-size: 20px;
 
   .contact {
     position: relative;
-    top: 30vh;
-    left: 5vw;
+    top: 65vh;
+    left: 55vw;
+    width: 100px;
 }
 
-.h1 {
-  font-size: 15vw;
+h1 {
+  font-size: 45px;
 }
 }
