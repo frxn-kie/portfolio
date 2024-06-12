@@ -51,11 +51,14 @@ class Particle {
     }
 }
 
+// Reduce number of particles for smaller screens
+const numParticles = window.innerWidth < 600 ? 20 : 50;
+
 // Creates particles, ensuring they do not overlap with each other
 function init(){
     particlesArray.length = 0;
 
-    for (let i = 0; i < 50; i++){
+    for (let i = 0; i < numParticles; i++){
         let particle;
         let overlapping;
         do {
