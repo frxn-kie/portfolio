@@ -2,12 +2,27 @@ const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-const particlesArray = [];
+let particlesArray = [];
+let numParticles = window.innerWidth < 900 ? 20 : 50;
 
-window.addEventListener('resize', function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    });
+let resizeTimeout;
+function resizeHandler() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        const newNumParticles = window.innerWidth < 900 ? 20 : 50;
+        if (numParticles !== newNumParticles) {
+            numParticles = newNumParticles;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            init();
+        } else {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    }, 400);
+}
+
+window.addEventListener('resize', resizeHandler);
 
 // Set particles size, colour, speed and screen-wrap
 class Particle {
@@ -24,12 +39,6 @@ class Particle {
     update(){
         this.x += this.speedX;
         this.y += this.speedY;
-        // if (this.x > canvas.width - this.size || this.x < this.size) {
-        //     this.speedX = -this.speedX;
-        //   }
-        //  if (this.y > canvas.height - this.size || this.y < this.size) {
-        //     this.speedY = -this.speedY;
-        //   }
         if (this.x > canvas.width + this.size) {
             this.x = -this.size;
           }
@@ -51,12 +60,9 @@ class Particle {
     }
 }
 
-// Reduce number of particles for smaller screens
-const numParticles = window.innerWidth < 600 ? 20 : 50;
-
 // Creates particles, ensuring they do not overlap with each other
 function init(){
-    particlesArray.length = 0;
+    particlesArray = [];
 
     for (let i = 0; i < numParticles; i++){
         let particle;

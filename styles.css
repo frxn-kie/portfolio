@@ -116,28 +116,26 @@ font-size: 20px;
 
 /* Optimised styling for mobile */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+    display: flex;
     flex-direction: row;
   }
 
 .right-hand {
-    position: relative;
-    order: 2;
-    grid-row: span 2;
+    width: 50vw;
+    left: 50vw;
+    height: 100%;
   }
-
   .left-hand {
-    position: relative;
-    order: 3;
+    top: 49vh;
+    width: 50vw;
+    height: 51vh;
   }
   .projects {
+    width: 50vw;
+    height: 50%;
     padding-right: 5vw;
     font-size: 18vw;
-    position: relative;
-    order: 1;
   }
 }
