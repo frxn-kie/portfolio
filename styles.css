@@ -113,3 +113,19 @@ font-size: 20px;
     font-size: 11vw;
   }
 }
+
+/* Optimised styling for mobile */
+
+@media only screen and (min-width: 600px) {
+  body {
+    flex-direction: row;
+  }
+
+  .left-hand, .right-hand {
+    width: 50%;
+  }
+  .projects {
+    padding-right: 10vw;
+    font-size: 18vw;
+  }
+}
