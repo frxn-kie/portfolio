@@ -134,16 +134,21 @@ font-size: 20px;
     width: 50vw;
     height: 51vh;
   }
+
   .projects {
     width: 50vw;
-    height: 50%;
+    height: 50vh;
     padding-right: 5vw;
     font-size: 18vw;
   }
 
   .contact {
-    position: absolute;
-    bottom: 5vh;
-    right: 5vw;
+    position: relative;
+top: 45vh;
+margin-left: 5vw;
+}
+
+.h1 {
+  font-size: 40px;
 }
 }
